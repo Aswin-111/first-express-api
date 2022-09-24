@@ -1,4 +1,4 @@
-const app = require('express')()
+const application = require('express')()
 
 
 
@@ -7,12 +7,12 @@ function logger(req,res,next){
     console.log(req.method,req.url,new Date().getFullYear())
     next()
 }
-app.use(logger)
-app.get('/',(req,res)=>{
+application.use(logger)
+application.get('/',(req,res)=>{
     res.send('<h1>This is the home page</h1>')
 })
 
 
 
 
-app.listen(5000);
+application.listen(5000);
